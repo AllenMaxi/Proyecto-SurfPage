@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de reserva de clases de surf">
+
+    <title>Surf Training</title>
+    <link rel="stylesheet" href="Styles/normalize.css">
+    <link rel="preload" href="Styles/styles.css" as="style">
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    
+    <header class="header alinear-texto">
+    <div class="contenedor hero__contenido">
+        <nav class="navegacion hero">
+            <div>
+                <h1>Escuela de Surf Morgan Boys</h1>
+            </div>
+           
+            <a class="navegacion__enlace" href="#">Contacto</a>
+            <a class="navegacion__enlace" href="playas.html">Surf como estilo de vida</a>
+        </nav>
+    </div>
+    <button class="btn-darkmode" id="btn-dark">
+        <i class="fas fa-moon"></i>
+        Dark Mode
+        </button>
+
+    </header>
+    <div class="flex">
+        <form class="form" name="login">
+            <!-- <div> -->
+            <label for="">Username </label>
+            <input name="usuario" type="text" class="username" style="outline: none;">
+            <!-- </div>  -->
+             <!-- <div>  -->
+            <label for="">Password</label>
+            <input name="password" type="password" class="contraseña" style="outline: none;" autofocus>
+            <!-- </div> -->
+            <button class="seccion" id="btnSeccion" onclick="CrearUsuario()" >Iniciar Seccion</button>
+        </form>
+    </div>
+   
+    <main class="main-contenedor">
+       <div id="mensaje" class="alinear-texto mensaje">
+
+       </div>
+        <form class="formulario">
+            <h1 class="form-contenido alinear-texto">Clases de surf</h1>
+            <div class="campo"><label class="form-contenido">Tu Nombre:</label>
+                <input class="sombra"  type='text' value='' id="nombre"></div>
+            <div class="campo"><label class="form-contenido">Tu Email:</label>
+                <input class="sombra" type='text' value='' id="email"></div>
+            <div class="campo"><label class="form-contenido">Tenes experiencia?:</label>
+                <input class="sombra" type='text' value='' id="experiencia"></div>
+            <div class="campo"> <label class="form-contenido">Fecha del turno</label> 
+                <input class="sombra" type="date" id="fecha"> </div>
+            <div class="campo"><label class="form-contenido">Mensaje:</label>
+                <textarea class="sombra" rows='6' id="mensaje"></textarea></div>
+            <div class="campo">
+                <input class="boton" type='submit' value='Envia Mensaje'></div>
+        </form>
+        <div class="clases alinear-texto"> <button class="button" id="boton" onclick="botn(event)">Info de las Clases</button></div>
+    
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-contenido" >
+            <i class="fab fa-facebook-f"> fb.com/MorganBoyzSurfshop</i>
+            <i class="fab fa-instagram"> MorganBoyz_ok</i>
+            <i class="fas fa-phone-square-alt"> whatsapp : 2232345687</i>
+            <i class="fas fa-map-marker-alt"> Alice y la costa ,Mar del plata , Buenos Aires</i>
+        </div>
+
+    </footer>
+    <template id="template">
+    <h2 class="titulo-template">Nombre </h2>
+    <p> <b> Precio </b> </p>
+    <p id="horario">Horario</p> 
+   </template>
+
+   <script src="https://kit.fontawesome.com/d478f9b1cf.js" crossorigin="anonymous"></script>
+  
+   <script src="js/class.js"></script>
+   <script src="js/MyFunctions.js"></script>
+   <script src="js/logIn.js"></script>
+   <script src="js/darkMode.js"></script>
+   <script src="js/01.js"></script>
+  
+</body>
+</html>
