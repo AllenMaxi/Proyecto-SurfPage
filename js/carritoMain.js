@@ -1,16 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
+const shoppingCartItemContainer = document.querySelector(".shoppingCartItemsContainer");//Declaramos una variable global que usaremos luego
+
+//Fetchear wl producto
+
+const fetchData = async () => {
+    try {
+    const res = await fetch("products.json");
+    const data = await res.json();
+ console.log(data[1])
+pintarProductos(data)
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
+
+
+function pintarProductos(data) {
+        document.querySelector(".first-img").src = data[0].img;
+        document.querySelector(".first-price").textContent = data[0].precio + `€`;
+        document.querySelector(".first-title").textContent = data[0].name;
+        document.querySelector(".second-img").src = data[1].imgDos;
+        document.querySelector(".second-price").textContent = data[1].precioDos + `€`;
+        document.querySelector(".second-title").textContent = data[1].nameDos;
+};
+  
+
+
+fetchData()
+
 const addToShoppingAcrtButtons = document.querySelectorAll(".addToCart");//LLamamos a todos los botones de agregar al carrito
 
+
 // console.log(addToShoppingAcrtButtons)
-addToShoppingAcrtButtons.forEach(addCartButton => {//iteramos sobre cada boton con un evento de click
-    addCartButton.addEventListener("click", addToCartClicked)
-})
+ addToShoppingAcrtButtons.forEach(addCartButton => {//iteramos sobre cada boton con un evento de click
+     addCartButton.addEventListener("click", addToCartClicked)
+ })
 
-const comprarButton = document.querySelector(".comprarButton");
-
-comprarButton.addEventListener("click", comprarButtonClicked)
-
-const shoppingCartItemContainer = document.querySelector(".shoppingCartItemsContainer");//Declaramos una variable global que usaremos luego
 
 function addToCartClicked(event) {//Cada boton que clickeamos
 const button = event.target
@@ -41,7 +67,7 @@ $(".toast").toast("show")//Un mensaje de boostrap que hara aparecer un mensaje c
    updateShoppingCartTotal()
 return;//Devolvera el valor y saldra de la funcion para que no se agrege el mismo producto
    }
-   
+
  }
 
 
@@ -63,22 +89,14 @@ return;//Devolvera el valor y saldra de la funcion para que no se agrege el mism
        <div
            class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
            <input class="shopping-cart-quantity-input  shoppingCartItemQuantity" style="width: 40px; border-radius: 20%" type="number"
-               value="1">
-           <button class="btn btn-danger buttonDelete" type="button">X</button>
+               value="1" onchange="QuantityChange(event)">
+           <button class="btn btn-danger buttonDelete" onclick="removeShoppingCartItem(event)"type="button">X</button>
        </div>
    </div>
 </div>`
 
 shoppingCartRow.innerHTML = shoppingCartContent;
 shoppingCartItemContainer.appendChild(shoppingCartRow);
-
-//Capturaremos el boton de eliminar
-shoppingCartRow.querySelector(".buttonDelete").addEventListener("click", removeShoppingCartItem);
-
-//Lo que haremos es sumar las cantidades del producto para que se sumen al precio
-shoppingCartRow.querySelector(".shoppingCartItemQuantity").addEventListener("change", QuantityChange)
-
-    
 
 //Llamaremos a la funcion para sumar los totales
 updateShoppingCartTotal()
@@ -130,4 +148,5 @@ function comprarButtonClicked(){
   
     shoppingCartItemContainer.remove()
     updateShoppingCartTotal()
-} })
+} 
+

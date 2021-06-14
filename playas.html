@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="Styles/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-     <link rel="stylesheet" href="Styles/styleplayas.css">
+     <link rel="stylesheet" href="Styles/stylePlayas.css">
 </head>
 <body>
 <header>
@@ -41,44 +42,62 @@
 <div class="card" style="width: 18rem;">
   <img src="img/pipeline.jpg" class="card-img-top" alt="Pipeline">
   <div class="card-body">
-    <h5 class="card-title">Pipeline</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h2 class="card-title"><i class="fas fa-plane"></i>Pipeline</h2>
+    <div>
+    <div>
+    <h3><i class="fas fa-life-ring"></i>Oahu, Hawaii</h3>
+    <p class="card-text">Pipeline, sede del campeonato mas famoso del mundo</p>
+    </div>
+    <p>Esta ola es considerada por muchos como una de las mas dificiles de surfear del planeta</p>
+    </div>
     <button class="btn btn-primary btn-One" onclick="btnPlay(event)">Mas info</button>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
   <img src="img/teahupoo.jpg" class="card-img-top" alt="Teahupoo">
   <div class="card-body">
-    <h5 class="card-title">Teahupoo</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h2 class="card-title"><i class="fas fa-plane"></i>Teahupoo</h2>
+  <div>
+    <div>
+      <h3><i class="fas fa-life-ring"></i>Tahiti, Polinesia Francesa</h3>
+      <p class="card-text">Teahupoo es una de las olas mas reconocidad el mundo</p>
+    </div>
+      <p>Esta ola es una de las mas peligrosas del mundo y al mismo tiempo de las mas grandes del mundo</p>
+  </div>
     <button class="btn btn-primary btn-Two" onclick="btnPlay(event)">Mas info</button>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
   <img src="img/puertoescondido.jpg" class="card-img-top" alt="Puerto escondido">
   <div class="card-body">
-    <h5 class="card-title">Puerto Escondido</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h2 class="card-title"><i class="fas fa-plane"></i>Puerto Escondido</h2>
+    <div>
+    <div>
+    <h3><i class="fas fa-life-ring"></i>Oaxaca, Mexico</h3>
+    <p class="card-text">Puerto Escondido conocido como el Pipeline de America Central</p>
+    </div>
+    <p>Esta playa cuenta con olas que no tienen nada que envidiarles a las Hawaianas</p>
+    </div>
     <button  class="btn btn-primary btn-Three" onclick="btnPlay(event)">Mas info</button>
   </div>
 </div>
 </main>
+
 <!-- MODALS -->
 <div class="modal-sectionOne">
 <div class="modal-bg-one modal-bg">
   <div class="modal">
-    <h2>Pipeline</h2>
+    <h2><i class="fas fa-thumbtack"></i>Pipeline</h2>
     <span class="close" onclick="closeModal(event)">X</span>
     <img src="img/pipelineSurf.jpg" alt="pipeline">
     <p>Esta ola es una de las mas peligrosas del planeta y puede llegar a medir hasta 5 metros de altura</p>
-   <h2>Nuestra Escuela</h2>
+   <h2><i class="fas fa-location-arrow"></i>Nuestra Escuela</h2>
    <p><b>Nuestra escuela en pipeline cuenta con el mejor equipamiento y los mejores profesores para que
      tu aprendizaje se lleve a cabo de forma eficiente. <br>
     <span> (Recuerda que no se admiten principiantes)</span>
    </b></p>
-   <label for="email">Email</label>
-   <input type="email" name="email"> 
-   <button>Enviar</button>
+   <i class="fas fa-anchor"></i> 
+   <h3>Surfea con Nosotros</h3>
   </div>
 </div>
 
@@ -87,18 +106,17 @@
 <div class="modal-sectionTwo">
   <div class="modal-bg-two modal-bg">
     <div class="modal">
-      <h2>Teahupoo</h2>
+      <h2><i class="fas fa-thumbtack"></i>Teahupoo</h2>
       <span class="close" onclick="closeModal(event)">X</span>
       <img src="img/teahupooSurf.jpg" alt="Teahupoo">
       <p>Esta ola es una de las mas peligrosas del planeta y puede llegar a medir hasta 5 metros de altura</p>
-     <h2>Nuestra Escuela</h2>
+     <h2><i class="fas fa-location-arrow"></i>Nuestra Escuela</h2>
      <p><b>Nuestra escuela en teahupoo cuenta con el mejor equipamiento y los mejores profesores para que
        tu aprendizaje se lleve a cabo de forma eficiente. <br>
       <span> (Recuerda que no se admiten principiantes)</span>
      </b></p>
-     <label for="email">Email:</label>
-     <input type="email" name="email"> 
-     <button>Enviar</button>
+     <i class="fas fa-anchor"></i>
+     <h3>Surfea con Nosotros</h3>
     </div>
   </div>
   
@@ -107,18 +125,17 @@
   <div class="modal-sectionThree">
     <div class="modal-bg-three modal-bg">
       <div class="modal">
-        <h2>Puerto Escondido</h2>
+        <h2><i class="fas fa-thumbtack"></i>Puerto Escondido</h2>
         <span class="close" onclick="closeModal(event)">X</span>
         <img src="img/puertoEscondidoSurf.jpg" alt="PuertoEscondido">
         <p>Esta ola es una de las mas peligrosas del planeta y puede llegar a medir hasta 5 metros de altura</p>
-       <h2>Nuestra Escuela</h2>
+       <h2><i class="fas fa-location-arrow"></i>Nuestra Escuela</h2>
        <p><b>Nuestra escuela en Puerto Escondido cuenta con el mejor equipamiento y los mejores profesores para que
          tu aprendizaje se lleve a cabo de forma eficiente. <br>
         <span> (Recuerda que no se admiten principiantes)</span>
        </b></p>
-       <label for="email">Email</label>
-       <input type="email" name="email"> 
-       <button>Enviar</button>
+       <i class="fas fa-anchor"></i>
+       <h3>Surfea con Nosotros</h3>
       </div>
     </div>
     
@@ -127,6 +144,8 @@
 
 
 
-<script src="js/SlidersAndModals/SliderAndModals.js"></script> 
+<script src="js/SlidersAndModals/Slider.js"></script> 
+<script src="js/SlidersAndModals/Modals.js"></script>
+
 </body>
 </html>

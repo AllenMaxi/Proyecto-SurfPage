@@ -39,41 +39,7 @@ setInterval(() => {
     Next()
 }, 5000);
 
-//MODALS
 
-
-//  let buttons = document.querySelectorAll(".btn")
-//  console.log(buttons)
-//  for (let i = 0; i < buttons.length; i++) {
-//     buttons[i].addEventListener("click", (event) => {
-    function btnPlay (event){
-        if(event.target.classList.contains("btn-One")){
-             let modal = document.querySelector(".modal-bg-one")
-             modal.classList.toggle("is-visible")
-         }
-        if(event.target.classList.contains("btn-Two")){
-            let modal = document.querySelector(".modal-bg-two")
-            modal.classList.toggle("is-visible")
-        }
-        if(event.target.classList.contains("btn-Three")){
-            let modal = document.querySelector(".modal-bg-three")
-            modal.classList.toggle("is-visible")
-        }
-        
-        }
-     
-
-//         const close = document.querySelectorAll(".close")
-// for (let i = 0; i < close.length; i++) {
-//     close[i].addEventListener("click", () => {
-function closeModal (event) {
-       const close = document.querySelectorAll(".close")
-       for (let i = 0; i < close.length; i++) {
-        close[i].closest(".modal-bg").classList.remove("is-visible")
-           
-       }
-        
-}
 
  
 

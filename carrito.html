@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 
 <head>
     <meta charset="UTF-8">
@@ -9,45 +9,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="Styles/products.css">
-    <title>Tienda</title>
+
+    <title>Tienda/Store</title>
 </head>
 <body>
 
     <header class="header">
-        <div class="contenedor">
-            <h1 class="text-center"><b>SURF AND BODYBOARD SHOP</b></h1>
+        <div class="contenedor head">
+            <h1 class="ml2">SURF AND BODYBOARD SHOP</h1>
+            <a href="index.html">About us</a>
+            <a href="playas.html">Beaches</a>
+            <a href="inicio.html">Sing Out</a>
         </div>
     </header>
 
 
   <section class="section">
             <h2>Tablas de Surf y Bodyboards</h2>
+            <button class="dark-theme-btn" onclick="btnDarkModeActive(event)">🌙</button>
             <!-- START SECTION STORE -->
     <section class="store">
         <div class="container">
             <div class="items">
                 <div class="row">
-
+                  
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Tabla de Surf 5.9</h3>
-                            <img class="item-image" src="img/tabla1.webp">
+                            <h3 class="item-title first-title"></h3>
+                            <img class="item-image img-galeria first-img" src="">
 
                             <div class="item-details">
-                                <h4 class="item-price">100.99€</h4>
+                                <h4 class="item-price first-price"></h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">BodyBoard VS</h3>
+                            <h3 class="item-title second-title"></h3>
 
-                            <img class="item-image" src="img/bodyboard1.webp">
+                            <img class="item-image img-galeria second-img" src="">
 
                             <div class="item-details">
-                                <h4 class="item-price">140.99€</h4>
+                                <h4 class="item-price second-price"></h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
@@ -59,7 +66,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">BodyBoard NMD</h3>
 
-                            <img class="item-image" src="img/bodyboard2.webp">
+                            <img class="item-image img-galeria" src="img/bodyboard2.webp">
 
                             <div class="item-details">
                                 <h4 class="item-price">130.99€</h4>
@@ -71,7 +78,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Tabla de Surf 6.0</h3>
 
-                            <img class="item-image" src="img/tabla2.webp">
+                            <img class="item-image img-galeria" src="img/tabla2.webp">
 
                             <div class="item-details">
                                 <h4 class="item-price">200.99€</h4>
@@ -85,7 +92,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Tabla de Surf 6.2</h3>
 
-                            <img class="item-image" src="img/tabla3.webp">
+                            <img class="item-image img-galeria" src="img/tabla3.webp">
                             <div class="item-details">
                                 <h4 class="item-price">150.99€</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -96,7 +103,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Tabla de Surf 6.4</h3>
 
-                            <img class="item-image" src="img/tabla4.webp">
+                            <img class="item-image img-galeria" src="img/tabla4.webp">
                             <div class="item-details">
                                 <h4 class="item-price">230.99€</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -109,7 +116,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">Tabla de Surf 6.6</h3>
 
-                            <img class="item-image" src="img/tabla5.webp">
+                            <img class="item-image img-galeria" src="img/tabla5.webp">
                             <div class="item-details">
                                 <h4 class="item-price">150.99€</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -120,7 +127,7 @@
                         <div class="item shadow mb-4">
                             <h3 class="item-title">BodyBoard VS 1pp</h3>
 
-                            <img class="item-image" src="img/Bodyboard3.webp">
+                            <img class="item-image img-galeria" src="img/Bodyboard3.webp">
                             <div class="item-details">
                                 <h4 class="item-price">130.99€</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -142,7 +149,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Traje de Neoprene 4.3</h3>
-                                    <img class="item-image" src="img/traje1.webp">
+                                    <img class="item-image img-galeria" src="img/traje1.webp">
         
                                     <div class="item-details">
                                         <h4 class="item-price">120.99€</h4>
@@ -154,7 +161,7 @@
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Traje de Neoprene Billabong</h3>
         
-                                    <img class="item-image" src="img/traje6.webp">
+                                    <img class="item-image img-galeria" src="img/traje6.webp">
         
                                     <div class="item-details">
                                         <h4 class="item-price">140.99€</h4>
@@ -169,7 +176,7 @@
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Traje de Neoprene Rip Curl</h3>
         
-                                    <img class="item-image" src="img/traje3.webp">
+                                    <img class="item-image img-galeria" src="img/traje3.webp">
         
                                     <div class="item-details">
                                         <h4 class="item-price">150.99€</h4>
@@ -181,7 +188,7 @@
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Traje de Neoprene 2.5</h3>
         
-                                    <img class="item-image" src="img/traje4.webp">
+                                    <img class="item-image img-galeria" src="img/traje4.webp">
         
                                     <div class="item-details">
                                         <h4 class="item-price">250.99€</h4>
@@ -195,7 +202,7 @@
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Traje de Neoprene 3.2</h3>
         
-                                    <img class="item-image" src="img/traje5.webp">
+                                    <img class="item-image img-galeria" src="img/traje5.webp">
                                     <div class="item-details">
                                         <h4 class="item-price">180.99€</h4>
                                         <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -206,7 +213,7 @@
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title">Funda para Tabla</h3>
         
-                                    <img class="item-image" src="img/funda.webp">
+                                    <img class="item-image img-galeria" src="img/funda.webp">
                                     <div class="item-details">
                                         <h4 class="item-price">100.99€</h4>
                                         <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
@@ -214,7 +221,10 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="imagen-light">
+                            <img src="img/close.svg" alt="" class="close">
+                            <img src="" alt="" class="agregar-imagen">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -269,7 +279,7 @@
                             </div>
                         </div>
                         <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
-                            data-target="#comprarModal">Comprar</button>
+                            data-target="#comprarModal" onclick="comprarButtonClicked(event)">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -325,7 +335,10 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
       
-        <script src="js/carrito/carritoMain.js"></script>
+        <script src="js/carritoMain.js"></script>
+        <script src="js/animaciones.js"></script>
+        <script src="js/temaOscuro.js"></script>
+
     
         
 </body>

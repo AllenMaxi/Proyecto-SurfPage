@@ -25,3 +25,10 @@ const aparecerImagen = (imagen)=>{
     imagenLight.classList.toggle('showImage')
     hamburguer.style.opacity = '0';
 }
+
+//Jquery animation
+$(document).ready(function(){
+
+      var titulo = $("h1");  
+      titulo.animate({fontSize: '3rem'}, "slow");
+    });

@@ -10,70 +10,6 @@
 }
 html{
     box-sizing: border-box;
-    font-size: 62.5%;
-
-}
-*, *:before, *:after{
-    box-sizing: inherit;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
-
-
-.header{
-    position: sticky;
-    background-image: url("../img/imagen2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    -webkit-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
-    -moz-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
-    box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
-     margin-bottom: 2rem;   
-}
-header h1{
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 2rem;
-    font-family: var(--fuente-principal);
-    top: 40%;
-    left: 50px;
-    position: absolute;
-    color: #0ffff8;
-    
-}
-
-body{
-    background: white;
-  
-}
-
-.container{
-    background-color: transparent;
-
-    
-}
-.item{
-    background-color: white;
-    border-radius: 30%;
-    text-align: center;
-}
-
-.cart{
-    background-color: white;
-    border-radius: 10%;
-}
-
-html{
-    box-sizing: border-box;
     font-family: var(--main-font);
     font-size: var(--font-size);
     scroll-behavior: smooth;
@@ -84,23 +20,89 @@ html{
 *:after{
     box-sizing: inherit;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
 body{
     margin: 0;
     overflow-x: hidden;
+    background: white;
 }
+
 
 img{
     max-width: 100%;
     height: auto;
 }
 
-h2{
+h1, h2{
     font-family: var(--fuente-principal);
 }
 
-/* MENU HAMBURGUESA */
 
+.header{
+    height: 80vh;
+    /* 02 */
+    background-image: linear-gradient(to top, rgba(7, 3, 228, 0.486) 0%, hsla(204, 66%, 68%, 0.514) 100%), url(../img/imagen2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
+    box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.55);
+    width: 100%;
+}
+.header a{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: yellow;
+}
+.ml2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: rgba(0,0,0,0.60);
+}
+
+
+.container{
+    background-color: transparent;
+
+    
+}
+.item{
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.cart{
+    background-color: white;
+    border-radius: 10%;
+}
+
+
+
+/* MENU HAMBURGUESA */
 
 .section{
     padding: 2rem;
@@ -113,23 +115,8 @@ h2{
     text-align: center;
 }
 
-.panel{
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--second-modal-color);
-    width: 100%;
-    transition: transform .3s ease;
-    /* Menu salga de arriba */
-    transform: translate(0, -100%);
-}
 
-.panel.is-active{
-    transform: translate(0, 0);
-}
+
 .panel-btn{
     position: fixed;
     z-index: 999;
@@ -145,27 +132,130 @@ h2{
     background-color: var(--main-color);
 }
 
-
-.menu{
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-}
-
-.menu a {
-    padding: 2rem;
-    width: inherit;
-    display: block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--main-color);
-    transition: all 0.3s ease;
-}
-.menu a:hover{
+/* Dark theme */
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
     font-weight: bold;
+    background-color: var(--main-color);
     color: var(--second-color);
-    background-color: var(--main-modal-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode {
+    background-color: var(--second-color);
+    color: var(--main-color)
+    
+}
+
+/* LIGHTBOX */
+@media (min-width: 750px){
+    .img-galeria{
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .imagen-light{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.534);
+        transform: translate(100%);
+        transition: transform .2s ease-in-out;
+    }
+    
+    .agregar-imagen{  
+        width: 30%;
+        transform: scale(0);
+        border-radius: 10px;
+        transition: transform .3s .2s;
+        height: auto;
+        
+    }
+    
+    .showImage{
+        transform: scale(1);
+    }
+    
+    .show{
+        transform: translate(0);
+    }
+    
+    .close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        cursor: pointer;
+    }
+}
+
+  
+   
+
+@media (max-width: 750px){
+    .img-galeria{
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .imagen-light{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.534);
+        transform: translate(100%);
+        transition: transform .2s ease-in-out;
+    }
+    
+    .agregar-imagen{
+        width: 55%;
+        transform: scale(0);
+        border-radius: 10px;
+        transition: transform .3s .2s;
+        height: auto;
+        
+    }
+    
+    .showImage{
+        transform: scale(1);
+    }
+    
+    .show{
+        transform: translate(0);
+    }
+    
+    .close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        cursor: pointer;
+    }
 }

@@ -1,0 +1,13 @@
+[
+    {
+      "name": "Tabla de surf 6.0",
+      "img": "img/tabla1.webp",
+      "precio": 120
+    },
+    {
+      "nameDos": "BodyBoard VS",
+      "imgDos": "img/bodyboard1.webp",
+      "precioDos": 130
+    }
+
+  ]
