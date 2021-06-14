@@ -6,7 +6,7 @@ event.preventDefault()
     const form = document.querySelector(".form");
     
     const div = document.querySelector(".mensaje");
-    const mensaje = document.createElement("div").textContent = "Te has registrado correctamente"
+    const mensaje = document.createElement("div").textContent = "Has ingresado correctamente"
     let username, password;
     username = document.getElementById("username").value
     password = document.getElementById("password").value
